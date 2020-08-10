@@ -1,15 +1,11 @@
 import React, { Component } from "react"
 import content from "../content"
+import "./Work.scss"
 
 class Work extends Component {
 
     state={
         images: [],
-    }
-
-
-    test = () => {
-        console.log(this.state.images)
     }
 
     componentDidMount(){
@@ -24,6 +20,7 @@ class Work extends Component {
         const index = urlArray.indexOf(this.props.url)
         return(
             <div>
+                <br></br>
                 <div className="work-title">{content[index].header}</div>
                 {
                     content[index].video.length>0
@@ -41,15 +38,16 @@ class Work extends Component {
                     :
                     <div></div>
                 }
+                <br></br>
+                <div className="stills">
                 {
                 this.props.urls.map((image, index)=> {
                     return(
-                        <div key={index}>
-                            <img style={{height: "500px"}} alt="still" src={image}></img>
-                        </div>
+                        <img className="still" key={index} style={{height: "200px"}} alt="still" src={image}></img>
                     )
                 })
                 }   
+                </div>
             </div>
         )
     }

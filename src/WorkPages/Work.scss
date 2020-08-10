@@ -1,0 +1,24 @@
+.work-title {
+    display: table;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 200%;
+}
+
+.embed-home {
+    display: table;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.stills {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.still {
+    padding: 1px 1px;
+}

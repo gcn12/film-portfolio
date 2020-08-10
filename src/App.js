@@ -61,20 +61,15 @@ class App extends Component {
   }
   
   componentDidMount() {
-    // this.setState({
-    //   url: window.location.href.split("/").reverse()[0]
-    // })
     this.getPhotos()
   }
   
-  test = () => {
-    console.log(this.state.urls)
-  }
 
   render() {
     return (
       <div>
         <Header />
+        <br></br>
         <Switch>
           <Route exact path="/" component={HomePage}></Route>
           <Route exact path="/films" render={(props)=> <Films {...props} getURL={this.getURL}/>}></Route>
