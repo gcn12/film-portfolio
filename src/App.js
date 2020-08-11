@@ -69,9 +69,6 @@ class App extends Component {
     return (
       <div>
         <Header />
-        {/* <br></br> */}
-        {/* <br></br> */}
-        {/* <br></br> */}
         <Switch>
           <Route exact path="/film-portfolio" component={HomePage}></Route>
           <Route exact path="/film-portfolio/films" render={(props)=> <Films {...props} getURL={this.getURL}/>}></Route>
