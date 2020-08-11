@@ -73,10 +73,10 @@ class App extends Component {
         <br></br>
         {/* <br></br> */}
         <Switch>
-          <Route exact path="/" component={HomePage}></Route>
-          <Route exact path="/films" render={(props)=> <Films {...props} getURL={this.getURL}/>}></Route>
-          <Route exact path="/contact" component={Contact}></Route>
-          <Route exact path={`/${this.state.url}`} render={(props)=><Work getPhotos={this.getPhotos}  urls={this.state.urls} {...props} url={this.state.url} title="Hello"/>}></Route>
+          <Route exact path="/film-portfolio" component={HomePage}></Route>
+          <Route exact path="/film-portfolio/films" render={(props)=> <Films {...props} getURL={this.getURL}/>}></Route>
+          <Route exact path="/film-portfolio/contactfilm-portfolio/contact" component={Contact}></Route>
+          <Route exact path={`/film-portfolio/${this.state.url}`} render={(props)=><Work getPhotos={this.getPhotos}  urls={this.state.urls} {...props} url={this.state.url} title="Hello"/>}></Route>
         </Switch>
       </div>
     );
