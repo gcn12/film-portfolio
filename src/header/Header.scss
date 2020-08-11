@@ -4,7 +4,7 @@
         width: 100%;
         display: flex;
         justify-content: space-between;
-        margin-bottom: 25px;
+        margin-bottom: 50px;
     
         .break {
             flex-basis: 100%;
@@ -17,7 +17,7 @@
         }
     
         .subtitle {
-            padding-left: 25px;
+            padding-left: 27px;
             font-size: 125%;
             // font-size: 1.5vw;
             font-family: "Lato", sans-serif;
@@ -118,7 +118,7 @@
         .link {
             width: 150%;
             cursor: pointer;
-            padding: 10px 15px;
+            padding: 0px 15px;
             text-decoration: none;
             color: gray;
             font-size: 150%;
