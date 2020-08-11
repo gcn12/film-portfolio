@@ -5,10 +5,14 @@ import "./Header.scss"
 const HomePage = () => {
     return(
         <div className="header">
-            <Link className="logo" to="/">Gareth Ng</Link>
+            <div className="logo-and-subtitle">
+                <Link className="logo" to="/">GARETH NG</Link>
+                <div className="break"></div>
+                <div className="subtitle">Cinematographer</div>
+            </div>
             <div className="links">
-                <Link className="link" to="/films">Work</Link>
-                <Link className="link" to="/contact">Contact</Link>
+                <Link className="link" to="/films">WORK</Link>
+                <Link className="link" to="/contact">CONTACT</Link>
             </div>
         </div>
     )
