@@ -7,7 +7,7 @@ const Thumbnail = (props) => {
     return(
         content.map((work, index) => {
             return(
-                <Link onClick={()=>props.getURL(work.url)} key={index} to={`/${work.url}`}>
+                <Link onClick={()=>props.getURL(work.url)} key={index} to={`/film-portfolio/${work.url}`}>
                     {/* <div className="text-and-thumbnail"> */}
                         <img className="thumbnail" alt="display" src={work.thumbnail}></img>
                         {/* <div class="text">{work.header}</div> */}
