@@ -8,7 +8,10 @@ const Thumbnail = (props) => {
         content.map((work, index) => {
             return(
                 <Link onClick={()=>props.getURL(work.url)} key={index} to={`/${work.url}`}>
-                    <img className="thumbnail" alt="display" src={work.thumbnail}></img>
+                    {/* <div className="text-and-thumbnail"> */}
+                        <img className="thumbnail" alt="display" src={work.thumbnail}></img>
+                        {/* <div class="text">{work.header}</div> */}
+                    {/* </div> */}
                 </Link>
             )
         })

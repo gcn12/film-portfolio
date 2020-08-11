@@ -3,7 +3,21 @@
     max-height: 250px;
 }
 
+
 img {
     max-width: 100%;
     height: auto;
+}
+
+.thumbnail {
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+ 
+.thumbnail:hover {
+    -webkit-filter: brightness(70%);
+    filter: brightness(70%);
 }
