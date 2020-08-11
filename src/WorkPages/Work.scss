@@ -10,6 +10,8 @@
     display: table;
     margin-right: auto;
     margin-left: auto;
+    max-width: 100%;
+    // height: auto;
 }
 
 .stills {
@@ -22,4 +24,6 @@
 
 .still {
     padding: 1px 1px;
+    max-height: 180px;
 }
+

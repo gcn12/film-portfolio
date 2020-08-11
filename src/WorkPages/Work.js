@@ -43,7 +43,8 @@ class Work extends Component {
                 {
                 this.props.urls.map((image, index)=> {
                     return(
-                        <img className="still" key={index} style={{height: "200px"}} alt="still" src={image}></img>
+                        <img className="still" key={index} alt="still" src={image}></img>
+                        // <img className="still" key={index} style={{height: "100px"}} alt="still" src={image}></img>
                     )
                 })
                 }   

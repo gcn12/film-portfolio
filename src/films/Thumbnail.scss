@@ -1,3 +1,9 @@
 .thumbnail {
     padding: 1px;
+    max-height: 250px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }

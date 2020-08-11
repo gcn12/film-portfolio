@@ -12,7 +12,8 @@
 
     .subtitle {
         padding-left: 25px;
-        font-size: 200%;
+        font-size: 125%;
+        // font-size: 1.5vw;
         font-family: "Lato", sans-serif;
     }
 
@@ -23,7 +24,9 @@
         text-decoration: none;
         color: black;
         font-family: 'Lato', sans-serif;
-        font-size: 400%;
+        font-size: 250%;
+        // font-size: 3vw;
+        // font-size: calc(14px + (40 - 14) * ((100vw - 300px) / (1600 - 300)));
     }
 
     .logo:hover{
@@ -31,7 +34,7 @@
     }
 
     .links{
-        width: 50%;
+        // width: 50%;
         height: 100%;
         display: flex;
         align-items: center;
