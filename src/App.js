@@ -71,6 +71,7 @@ class App extends Component {
         <Header />
         <br></br>
         <br></br>
+        {/* <br></br> */}
         <Switch>
           <Route exact path="/" component={HomePage}></Route>
           <Route exact path="/films" render={(props)=> <Films {...props} getURL={this.getURL}/>}></Route>
