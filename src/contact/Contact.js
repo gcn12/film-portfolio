@@ -5,10 +5,12 @@ const Contact = () => {
     return(
         <div className="contact">
             <div className="email">
-                e: garethcng@gmail.com
+                <div className="no-select">e:</div>
+                garethcng@gmail.com
             </div>
             <div className="instagram">
-                instagram: instagram.com/garethng
+                <div className="no-select">ig:</div> 
+                instagram.com/garethng
             </div>
         </div>
     )

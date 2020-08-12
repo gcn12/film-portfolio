@@ -5,3 +5,19 @@
     transform: translate(-50%, -50%);
     font-family: "Lato", sans-serif;
 }
+
+.no-select {
+    -webkit-user-select: none;  
+    -moz-user-select: none;     
+    -ms-user-select: none;      
+    user-select: none;
+    padding-right: 10px; 
+}
+
+.email {
+    display: flex;
+}
+
+.instagram {
+    display: flex;
+}
