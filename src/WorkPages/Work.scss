@@ -6,6 +6,12 @@
     font-family: "Lato", sans-serif;
 }
 
+@media only screen and (max-width: 700px){
+    .work-title{
+        font-size: 150%;
+    }
+}
+
 .embed-home {
     display: table;
     margin-right: auto;
