@@ -1,10 +1,16 @@
-@media only screen and (min-width: 700px){
+@media only screen and (min-width: 750px){
     .header {
         height: 70px;
         width: 100%;
         display: flex;
         justify-content: space-between;
         margin-bottom: 50px;
+        margin-top: 40px;
+        -webkit-user-select: none;  
+    -moz-user-select: none;     
+    -ms-user-select: none;      
+    user-select: none;
+        // margin-left: 60px;
     
         .break {
             flex-basis: 100%;
@@ -13,7 +19,7 @@
 
         .logo-and-subtitle{
             margin-top: 20px;
-            margin-left: 50px;
+            margin-left: 110px;
         }
     
         .subtitle {
@@ -49,7 +55,8 @@
             font-family: 'Lato', sans-serif;
             font-size: 150%;
             padding-top: 20px;
-            padding-right: 3%;
+            // padding-right: 70px;
+            margin-right: 120px;
         }
     
         .link {
@@ -65,7 +72,7 @@
     }
 }
 
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 750px){
     .header {
         height: 100%;
         width: 100%;

@@ -43,7 +43,7 @@ class Work extends Component {
                 {
                 this.props.urls.map((image, index)=> {
                     return(
-                        <img className="still" key={index} alt="still" src={image}></img>
+                        <img style={{animation: `fadeInAnimation ease ${Math.random()*2+1}s` }} className="still" key={index} alt="still" src={image}></img>
                         // <img className="still" key={index} style={{height: "100px"}} alt="still" src={image}></img>
                     )
                 })

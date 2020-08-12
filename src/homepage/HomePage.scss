@@ -1,8 +1,15 @@
 .reel {
+    position: relative;
+}
+
+iframe {
     // position: relative;
-    padding-bottom: 56.25%; /* 16:9 */
-    height: 0;
-    top: 50%;
+    // padding-bottom: 56.25%; /* 16:9 */
+    // height: 0;
+    // top: 50%;
+    display: block;
+   margin: 0 auto;
+
 }
 // .reel iframe {
 //     position: absolute;
