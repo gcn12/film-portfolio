@@ -25,16 +25,18 @@ class Work extends Component {
                 {
                     content[index].video.length>0
                     ? 
-                    <iframe 
-                    className="embed-home"
-                    src={content[index].video} 
-                    width="640" 
-                    height="272" 
-                    frameBorder="0" 
-                    allow="autoplay; fullscreen" 
-                    title="video" 
-                    allowFullScreen
-                    />
+                    <div className={content[index].sixteenNine ? "work16" : "work235"}>
+                        <iframe 
+                        className="embed-work"
+                        src={content[index].video} 
+                        width="960" 
+                        height="540" 
+                        frameBorder="0" 
+                        allow="autoplay; fullscreen" 
+                        title="video" 
+                        allowFullScreen
+                        />
+                    </div>
                     :
                     <div></div>
                 }

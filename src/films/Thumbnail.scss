@@ -1,38 +1,72 @@
 .thumbnail {
     padding: 1px;
     // max-height: 250px;
+    // max-width: 600px;
+    width: 100%;
+    height: auto;
     max-width: 600px;
 }
 
 
 img {
-    max-width: 100%;
+    // max-width: 100%;
     // min-width: 700px;
-    height: auto;
+    // height: auto;
     animation: fadeInAnimation ease 2.5s; 
     animation-iteration-count: 1; 
     animation-fill-mode: forwards; 
 }
 
+.text-and-thumbnail {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text{
+    font-size: 100%;
+    font-family: Lato;
+    visibility: hidden;
+    display: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    color: white;
+    position: absolute;
+    // font-size: 10px;
+    font-weight: bold;
+    bottom: 12px;
+    top: 50%;
+    left: 50%;
+    width: 70%;
+    height: 70%;
+    transform: translate(-50%, -50%);
+}
+
+.text-and-thumbnail:hover .text {
+    visibility: visible;
+}
 
 @keyframes fadeInAnimation { 
- 0% { 
-     opacity: 0; 
- } 
- 100% { 
-     opacity: 1; 
-  } 
-} 
-
-.thumbnail {
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    -ms-transition: all 1s ease;
-    transition: all 1s ease;
-}
- 
-.thumbnail:hover {
-    -webkit-filter: brightness(70%);
-    filter: brightness(70%);
-}
+    0% { 
+        opacity: 0; 
+    } 
+    100% { 
+        opacity: 1; 
+     } 
+   } 
+   
+   .text-and-thumbnail .thumbnail {
+       -webkit-transition: all 1s ease;
+       -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+       -ms-transition: all 1s ease;
+       transition: all 1s ease;
+   }
+    
+   .text-and-thumbnail:hover .thumbnail{
+       -webkit-filter: brightness(80%);
+       filter: brightness(80%);
+   }
