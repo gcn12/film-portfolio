@@ -1,11 +1,13 @@
 .thumbnail {
     padding: 1px;
-    max-height: 250px;
+    // max-height: 250px;
+    max-width: 600px;
 }
 
 
 img {
     max-width: 100%;
+    // min-width: 700px;
     height: auto;
     animation: fadeInAnimation ease 2.5s; 
     animation-iteration-count: 1; 
