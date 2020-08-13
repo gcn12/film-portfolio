@@ -37,7 +37,7 @@ class App extends Component {
         urls: []
       })
 
-      console.log(index)
+
       setID=content[index].album
       fetch(`https://www.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=3e8a789d6f4ae2feba4c606393db4c70&photoset_id=${setID}&user_id=96067761%40N02&format=json&nojsoncallback=1`)
       .then(response=>response.json())

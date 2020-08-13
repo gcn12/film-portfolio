@@ -10,7 +10,7 @@ const Thumbnail = (props) => {
                 <Link onClick={()=>props.getURL(work.url)} key={index} to={`/film-portfolio/${work.url}`}>
                     <div className="text-and-thumbnail">
                         <img className="thumbnail" alt="display" src={work.thumbnail}></img>
-                        <div class="text">{work.displayTitle.toUpperCase()}</div>
+                        <div className="text">{work.displayTitle.toUpperCase()}</div>
                     </div>
                 </Link>
             )
