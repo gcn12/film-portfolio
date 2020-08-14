@@ -26,7 +26,7 @@ class Work extends Component {
         }
         const index = urlArray.indexOf(this.props.url)
         return(
-            <div>
+            <div className="work">
                 <br></br>
                 <div className="work-title">{content[index].header}</div>
                 {
