@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import content from "../content"
 import "./Work.scss"
+import {ReactComponent as PlayButton } from "../play-button.svg"
 
 class Work extends Component {
 
@@ -33,8 +34,19 @@ class Work extends Component {
                     content[index].video.length>0
                     ? 
                     (this.state.thumbnail ? 
+                        // <div className="thumbnail-container">
+                        //     <div className="container">
+                        //         <PlayButton className="play-button"/>
+                        //         <div className="text-test">text</div>
+                        //         <img className="thumbnail-work" onClick={this.thumbnailToVideo} key={index} alt="still" src={content[index].thumbnail}></img>
+                        //     </div>
+                        // </div>
                         <div className="thumbnail-container">
-                            <img className="thumbnail-work" onClick={this.thumbnailToVideo} key={index} alt="still" src={content[index].thumbnail}></img>
+                            {/* <div className="container"> */}
+                                <img className="thumbnail-work" onClick={this.thumbnailToVideo} key={index} alt="still" src={content[index].thumbnail}></img>
+                                <PlayButton className="play-button" onClick={this.thumbnailToVideo} />
+                                {/* <div className="text-test">text</div> */}
+                            {/* </div> */}
                         </div>
                         :
                         <div className={content[index].sixteenNine ? "work16" : "work235"}>

@@ -5,9 +5,7 @@
     width: 100%;
     height: auto;
     max-width: 600px;
-    contain: content;
 }
-
 
 img {
     // max-width: 100%;
@@ -29,7 +27,7 @@ img {
     font-size: 100%;
     font-family: Lato;
     visibility: hidden;
-    display: none;
+    // display: none;
     display: flex;
     align-items: center;
     justify-content: center;
