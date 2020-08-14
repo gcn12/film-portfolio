@@ -17,6 +17,22 @@
 //     height: auto;
 // }
 
+.thumbnail-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    padding-bottom: 1%; /* 2.35:1 */
+}
+
+.thumbnail-work {
+    // width: 1920px;
+    width: 100%;
+    height: auto;
+    // height: 816px;
+    max-width: 1150px;
+}
+
 .work16 {
     position: relative;
     padding-bottom: 47%; /* 16:9 */

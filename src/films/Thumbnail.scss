@@ -5,6 +5,7 @@
     width: 100%;
     height: auto;
     max-width: 600px;
+    contain: content;
 }
 
 
@@ -67,6 +68,10 @@ img {
    }
     
    .text-and-thumbnail:hover .thumbnail{
-       -webkit-filter: brightness(80%);
-       filter: brightness(80%);
+       -webkit-filter: blur(2px);
+       filter: blur(2px);
+    //    -webkit-filter: brightness(80%);
+    //    filter: brightness(80%);
    }
+
+   

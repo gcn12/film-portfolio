@@ -6,10 +6,17 @@ class Work extends Component {
 
     state={
         images: [],
+        thumbnail: true,
     }
 
     componentDidMount(){
         this.props.getPhotos()
+    }
+
+    thumbnailToVideo = () => {
+        this.setState({
+            thumbnail: false
+        })
     }
 
     render(){
@@ -25,7 +32,12 @@ class Work extends Component {
                 {
                     content[index].video.length>0
                     ? 
-                    <div className={content[index].sixteenNine ? "work16" : "work235"}>
+                    (this.state.thumbnail ? 
+                        <div className="thumbnail-container">
+                            <img className="thumbnail-work" onClick={this.thumbnailToVideo} key={index} alt="still" src={content[index].thumbnail}></img>
+                        </div>
+                        :
+                        <div className={content[index].sixteenNine ? "work16" : "work235"}>
                         <iframe 
                         className="embed-work"
                         src={content[index].video} 
@@ -37,6 +49,7 @@ class Work extends Component {
                         allowFullScreen
                         />
                     </div>
+                    )
                     :
                     <div></div>
                 }
