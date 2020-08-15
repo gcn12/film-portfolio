@@ -26,10 +26,6 @@
     opacity: .8;
 }
 
-
-
-
-
 .work{
     margin-bottom: 40px;
 }
@@ -135,7 +131,8 @@
 
 @media only screen and (max-width: 700){
     .still {
-        padding: 1px 1px;
+        // padding: 1px 1px;
+        padding: 0;
         margin: 100% 0px;
     }
 }
