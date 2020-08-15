@@ -30,6 +30,7 @@ class Work extends Component {
             <div className="work">
                 <br></br>
                 <div className="work-title">{content[index].header}</div>
+                <br></br>
                 {
                     content[index].video.length>0
                     ? 

@@ -1,4 +1,15 @@
+.blur-container {
+    position:relative;
+    // width:300px;      
+    // height:300px;         
+    overflow:hidden;
+}
+
 .thumbnail {
+    left:-100px;
+    right:-100px;
+    top:-100px;
+    bottom:-100px;
     padding: 1px;
     // max-height: 250px;
     // max-width: 600px;
@@ -44,9 +55,16 @@ img {
     transform: translate(-50%, -50%);
 }
 
+@media only screen and (max-width: 750px){
+    .text{
+        visibility: visible;
+    }
+}
+
 .text-and-thumbnail:hover .text {
     visibility: visible;
 }
+
 
 @keyframes fadeInAnimation { 
     0% { 
@@ -54,22 +72,25 @@ img {
     } 
     100% { 
         opacity: 1; 
-     } 
-   } 
+    } 
+} 
+
    
-   .text-and-thumbnail .thumbnail {
-       -webkit-transition: all 1s ease;
-       -moz-transition: all 1s ease;
-       -o-transition: all 1s ease;
-       -ms-transition: all 1s ease;
-       transition: all 1s ease;
-   }
-    
-   .text-and-thumbnail:hover .thumbnail{
-       -webkit-filter: blur(2px);
-       filter: blur(2px);
+.text-and-thumbnail .thumbnail {
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+@media only screen and (min-width: 750px){
+    .text-and-thumbnail:hover .thumbnail{
+        -webkit-filter: blur(2px);
+        filter: blur(2px);
     //    -webkit-filter: brightness(80%);
     //    filter: brightness(80%);
-   }
+    }
+}
 
    
