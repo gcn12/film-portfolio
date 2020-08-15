@@ -25,7 +25,7 @@ class HomePage extends Component {
                 {this.state.isThumbnail ? 
             <div className="thumbnail-container">
                 <img onClick={this.thumbnailToVideo} className="reel-thumbnail" alt="thumbnail" src="https://live.staticflickr.com/65535/50211469602_89981b86da_k.jpg"></img>
-                <PlayButton className="play-button"/>
+                <PlayButton onClick={this.thumbnailToVideo} className="play-button"/>
             </div>
                 :
                     <iframe 
