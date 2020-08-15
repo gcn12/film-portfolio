@@ -30,7 +30,7 @@ class HomePage extends Component {
                 :
                     <iframe 
                     className="embed-home"
-                    src="https://player.vimeo.com/video/353403743" 
+                    src="https://player.vimeo.com/video/353403743?autoplay=1" 
                     width="960" 
                     height="540" 
                     frameBorder="0" 
