@@ -52,7 +52,7 @@ class Work extends Component {
                         <div className={content[index].sixteenNine ? "work16" : "work235"}>
                         <iframe 
                         className="embed-work"
-                        src={content[index].video} 
+                        src={`https://player.vimeo.com/video/${content[index].video}?autoplay=1`} 
                         width="960" 
                         height="540" 
                         frameBorder="0" 
