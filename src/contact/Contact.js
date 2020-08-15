@@ -10,7 +10,7 @@ const Contact = () => {
             </div>
             <div className="instagram">
                 <div className="no-select">ig:</div> 
-                instagram.com/garethng
+                instagram.com/gareth.ng
             </div>
         </div>
     )
