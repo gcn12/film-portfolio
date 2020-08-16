@@ -35,19 +35,9 @@ class Work extends Component {
                     content[index].video.length>0
                     ? 
                     (this.state.thumbnail ? 
-                        // <div className="thumbnail-container">
-                        //     <div className="container">
-                        //         <PlayButton className="play-button"/>
-                        //         <div className="text-test">text</div>
-                        //         <img className="thumbnail-work" onClick={this.thumbnailToVideo} key={index} alt="still" src={content[index].thumbnail}></img>
-                        //     </div>
-                        // </div>
                         <div className="thumbnail-container">
-                            {/* <div className="container"> */}
                                 <img className="thumbnail-work" onClick={this.thumbnailToVideo} key={index} alt="still" src={content[index].thumbnail}></img>
                                 <PlayButton className="play-button" onClick={this.thumbnailToVideo} />
-                                {/* <div className="text-test">text</div> */}
-                            {/* </div> */}
                         </div>
                         :
                         <div className={content[index].sixteenNine ? "work16" : "work235"}>
@@ -67,15 +57,17 @@ class Work extends Component {
                     <div></div>
                 }
                 <br></br>
-                <div className="stills">
-                {
-                this.props.urls.map((image, index)=> {
-                    return(
-                        <img style={{animation: `fadeInAnimation ease ${Math.random()*2+1}s` }} className="still" key={index} alt="still" src={image}></img>
-                        // <img className="still" key={index} style={{height: "100px"}} alt="still" src={image}></img>
-                    )
-                })
-                }   
+                <div className="test">
+                    <div className="stills">
+                    {
+                        this.props.urls.map((image, index)=> {
+                            return(
+                                // <img style={{animation: `fadeInAnimation ease ${(Math.random()*2)+1}s` }} className="still" key={index} alt="still" src={image}></img>
+                                <img className="still" key={index} alt="still" src={image}></img>
+                                )
+                            })
+                        }   
+                    </div>
                 </div>
             </div>
         )

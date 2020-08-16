@@ -7,13 +7,6 @@
     margin: 0 10%;
 }
 
-// .container{
-//     position: relative;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-// }
-
 .thumbnail-work {
     position: relative;
     width: 100%;
@@ -28,7 +21,6 @@
 }
 
 .work{
-
     margin-bottom: 40px;
 }
 
@@ -45,23 +37,6 @@
         font-size: 150%;
     }
 }
-
-// .thumbnail-container{
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     width: auto;
-//     padding-bottom: 1%; /* 2.35:1 */
-//     padding: 0px 10%;
-// }
-
-
-// .thumbnail-work {
-//     // position: relative;
-//     width: 100%;
-//     height: auto;
-//     max-width: 1150px;
-// }
 
 .work16 {
     position: relative;
@@ -95,34 +70,6 @@
     height: 100%;
 }
 
-
-
-// .play-button  {
-//     position: absolute;
-// }
-
-// .text-test{
-//     font-size: 100%;
-//     font-family: Lato;
-//     // visibility: hidden;
-//     // display: none;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     vertical-align: middle;
-//     color: black;
-//     position: absolute;
-//     // font-size: 10px;
-//     font-weight: bold;
-//     bottom: 12px;
-//     top: 50%;
-//     left: 50%;
-//     width: 70%;
-//     height: 70%;
-//     transform: translate(-50%, -50%);
-// }
-
-
 .stills {
     display: flex;
     justify-content: center;
@@ -148,7 +95,7 @@
 .still {
     // max-height: 180px;
     max-width: 400px;
-    // animation: fadeInAnimation ease 3s; 
+    animation: fadeInAnimation ease 3s; 
     animation-iteration-count: 1; 
     animation-fill-mode: forwards; 
 }

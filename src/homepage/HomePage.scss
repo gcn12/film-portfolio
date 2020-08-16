@@ -1,7 +1,4 @@
 .thumbnail-reel-container {
-    // position: relative;
-    // display: inline-block;
-    // height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,8 +18,8 @@
     position: relative;
     padding-bottom: 42.6%; /* 2.35:1 */
     height: 0;
-    width: 80%;
     margin: 0 auto;
+    bottom: 0;
 }
 
 .reel .embed-home {
@@ -43,5 +40,12 @@
 .play-button{
     position: absolute;
 }
+
+.footer{
+    font-family: "Lato", sans-serif;
+    margin-left: 110px;
+}
+
+
 
 
