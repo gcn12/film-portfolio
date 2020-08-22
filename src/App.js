@@ -25,15 +25,21 @@ class App extends Component {
   }
 
   getPhotos = () => {
+    let arrayIndex
+    if(window.location.href.split("/").length===6){
+      arrayIndex=1
+    }else{
+      arrayIndex=0
+    }
     this.setState({
-      url: window.location.href.split("/").reverse()[0]
+      url: window.location.href.split("/").reverse()[arrayIndex]
     })
     let setID = "72157715435274906"
     const urlArray = []
     for (const item of content){
-        urlArray.push(item.url)
+      urlArray.push(item.url)
     }
-    const index = urlArray.indexOf(window.location.href.split("/").reverse()[0])
+    const index = urlArray.indexOf(window.location.href.split("/").reverse()[arrayIndex])
     if(index!==-1){
       this.setState({
         urls: []

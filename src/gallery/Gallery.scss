@@ -3,6 +3,9 @@
     align-items: center;
     justify-content: center;
     padding-bottom: 20px;
+    animation: fadeInAnimation ease 4s; 
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards; 
 }
 
 .nav-button{

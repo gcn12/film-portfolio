@@ -1,7 +1,7 @@
 import * as actions from "./enlargeImageActions"
 
 export const initialState = {
-    index: ""
+    index: 0
 }
 
 export default function enlargeImageReducer(state=initialState, action){
