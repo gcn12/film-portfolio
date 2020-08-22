@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/film-portfolio/static/css/main.7597802b.chunk.css",
+    "main.css": "/film-portfolio/static/css/main.90065541.chunk.css",
     "main.js": "/film-portfolio/static/js/main.0e073763.chunk.js",
     "main.js.map": "/film-portfolio/static/js/main.0e073763.chunk.js.map",
     "runtime-main.js": "/film-portfolio/static/js/runtime-main.c5f149ed.js",
@@ -8,16 +8,16 @@
     "static/js/2.349682b0.chunk.js": "/film-portfolio/static/js/2.349682b0.chunk.js",
     "static/js/2.349682b0.chunk.js.map": "/film-portfolio/static/js/2.349682b0.chunk.js.map",
     "index.html": "/film-portfolio/index.html",
-    "precache-manifest.e539b6297a2e23196f69515b4f310843.js": "/film-portfolio/precache-manifest.e539b6297a2e23196f69515b4f310843.js",
+    "precache-manifest.85e7e77c67d45bbad34ad3278bd8699d.js": "/film-portfolio/precache-manifest.85e7e77c67d45bbad34ad3278bd8699d.js",
     "service-worker.js": "/film-portfolio/service-worker.js",
-    "static/css/main.7597802b.chunk.css.map": "/film-portfolio/static/css/main.7597802b.chunk.css.map",
+    "static/css/main.90065541.chunk.css.map": "/film-portfolio/static/css/main.90065541.chunk.css.map",
     "static/js/2.349682b0.chunk.js.LICENSE.txt": "/film-portfolio/static/js/2.349682b0.chunk.js.LICENSE.txt",
     "static/media/play-button.029be54c.svg": "/film-portfolio/static/media/play-button.029be54c.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.c5f149ed.js",
     "static/js/2.349682b0.chunk.js",
-    "static/css/main.7597802b.chunk.css",
+    "static/css/main.90065541.chunk.css",
     "static/js/main.0e073763.chunk.js"
   ]
 }
