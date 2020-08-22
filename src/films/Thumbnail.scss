@@ -8,10 +8,10 @@
     right:-100px;
     top:-100px;
     bottom:-100px;
-    padding: 1px;
+    // padding: 1px;
     width: 100%;
     height: auto;
-    max-width: 600px;
+    // max-width: 600px;
 }
 
 img {
@@ -46,7 +46,7 @@ img {
     transform: translate(-50%, -50%);
 }
 
-@media only screen and (max-width: 750px){
+@media only screen and (max-width: 870px){
     .text{
         visibility: visible;
     }
@@ -75,7 +75,11 @@ img {
     transition: all 1s ease;
 }
 
-@media only screen and (min-width: 750px){
+@media only screen and (min-width: 870px){
+    .image-scale-container{
+        padding: 1px;
+        width: 40vw;
+    }
     .text-and-thumbnail:hover .thumbnail{
         -webkit-filter: blur(2px);
         filter: blur(2px);
