@@ -7,6 +7,7 @@ import Films from "./films/Films"
 import Work from "./WorkPages/Work"
 import Contact from "./contact/Contact"
 import content from "./content"
+import Gallery from "./gallery/Gallery"
 
 class App extends Component {
 
@@ -14,6 +15,7 @@ class App extends Component {
     url: "",
     id: [],
     urls: [],
+    enlargeImageIndex: ""
   }
 
   getURL = (input) => {
@@ -59,6 +61,12 @@ class App extends Component {
       })
     }
   }
+
+  getEnlargeImageIndex = (index) => {
+    this.setState({
+      enlargeImageIndex: index
+    })
+  }
   
   componentDidMount() {
     this.getPhotos()
@@ -73,7 +81,8 @@ class App extends Component {
           <Route exact path="/film-portfolio" component={HomePage}></Route>
           <Route exact path="/film-portfolio/films" render={(props)=> <Films {...props} getURL={this.getURL}/>}></Route>
           <Route exact path="/film-portfolio/contact" component={Contact}></Route>
-          <Route exact path={`/film-portfolio/${this.state.url}`} render={(props)=><Work getPhotos={this.getPhotos}  urls={this.state.urls} {...props} url={this.state.url} title="Hello"/>}></Route>
+          <Route exact path={`/film-portfolio/${this.state.url}`} render={(props)=><Work getEnlargeImageIndex={this.getEnlargeImageIndex} getPhotos={this.getPhotos}  urls={this.state.urls} {...props} url={this.state.url} title="Hello"/>}></Route>
+          <Route exact path={`/film-portfolio/${this.state.url}/gallery`} render={(props)=><Gallery enlargeImageIndex={this.state.enlargeImageIndex} getPhotos={this.getPhotos}  urls={this.state.urls} {...props} url={this.state.url} title="Hello"/>}></Route>
         </Switch>
       </div>
     );

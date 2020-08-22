@@ -1,0 +1,27 @@
+.enlarged-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.nav-button{
+    font-size: 40px;
+    -webkit-user-select: none;  
+    -moz-user-select: none;     
+    -ms-user-select: none;      
+    user-select: none;
+    cursor: pointer;
+}
+
+.enlarged-image {
+    width: 81vw;
+    height: auto;
+}
+
+.back{
+    padding-bottom: 10px;
+    font-family: "Lato", sans-serif;
+    margin-left: 139px;
+    cursor: pointer;
+}

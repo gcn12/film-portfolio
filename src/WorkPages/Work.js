@@ -2,6 +2,9 @@ import React, { Component } from "react"
 import content from "../content"
 import "./Work.scss"
 import {ReactComponent as PlayButton } from "../play-button.svg"
+import { Link } from "react-router-dom"
+import { connect } from "react-redux"
+import { startIndex } from "../redux/enlargeImageActions"
 
 class Work extends Component {
 
@@ -63,7 +66,9 @@ class Work extends Component {
                         this.props.urls.map((image, index)=> {
                             return(
                                 // <img style={{animation: `fadeInAnimation ease ${(Math.random()*2)+1}s` }} className="still" key={index} alt="still" src={image}></img>
-                                <img className="still" key={index} alt="still" src={image}></img>
+                                <Link onClick={()=>this.props.dispatch(startIndex(index))} key={index} to={`${this.props.match.path}/gallery`}>
+                                    <img className="still" id={index} key={index} alt="still" src={image}></img>
+                                </Link>
                                 )
                             })
                         }   
@@ -74,4 +79,8 @@ class Work extends Component {
     }
 }
 
-export default Work
+const mapStateToProps = state => ({
+    index: state.enlargeImage.index
+})
+
+export default connect(mapStateToProps)(Work)
