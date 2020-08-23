@@ -1,9 +1,11 @@
 .contact{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    /* position: relative; */
+    /* left: 50%; */
+    /* top: 50%; */
+    /* transform: translate(0%, -50%); */
+    text-align: center;
     font-family: "Lato", sans-serif;
+    margin-top: 18%;
 }
 
 .no-select {
@@ -16,8 +18,14 @@
 
 .email {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
 }
 
 .instagram {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
 }
