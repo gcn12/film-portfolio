@@ -97,21 +97,23 @@
 
 @media only screen and (min-width: 1000px){
     .still {
-        padding: 1px 1px;
+        // padding: 1px 1px;
+        padding: 0px 1px 0px 1px;
         width: 26.5vw;
     }
 }
 
 @media only screen and (max-width: 1000px){
     .still {
-        padding: 1px 1px;
+        // padding: 1px 1px;
+        padding: 0px 1px 0px 1px;
         width: 40vw;
     }
 }
 
 @media only screen and (max-width: 750px){
     .still {
-        padding: 1px 1px;
+        padding: 0px 1px 0px 1px;
         width: 79.8vw;
     }
 }
