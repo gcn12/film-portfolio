@@ -14,6 +14,7 @@ class App extends Component {
   state={
     url: "",
     urls: [],
+    urlsLarge: [],
   }
 
   getURL = (input) => {
@@ -48,13 +49,17 @@ class App extends Component {
       .then(response=>response.json())
       .then(data=>{
         const urlArray = []
+        const urlArrayLarge = []
         data.photoset.photo.map(photo=>{
           fetch(`https://www.flickr.com/services/rest/?method=flickr.photos.getSizes&api_key=3e8a789d6f4ae2feba4c606393db4c70&photo_id=${photo.id}&format=json&nojsoncallback=1`)
           .then(response=>response.json())
           .then(data=>{
-            urlArray.push(data.sizes.size[9].source)
+            // urlArray.push(data.sizes.size[9].source)
+            urlArray.push(data.sizes.size[7].source)
+            urlArrayLarge.push(data.sizes.size[12].source)
             this.setState({
-              urls: urlArray
+              urls: urlArray,
+              urlsLarge: urlArrayLarge
             })
           })
           return(photo.id)
@@ -86,7 +91,7 @@ class App extends Component {
           <Route exact path="/film-portfolio/contact" component={Contact}></Route>
           <Route exact path={`/film-portfolio/${this.state.url}`} render={(props)=><Work getEnlargeImageIndex={this.getEnlargeImageIndex} getPhotos={this.getPhotos}  urls={this.state.urls} {...props} url={this.state.url} title="Hello"/>}></Route>
           {/* <Route exact path={`/film-portfolio/${this.state.url}/gallery`} render={(props)=><Gallery getPhotos={this.getPhotos}  urls={this.state.urls} {...props} url={this.state.url} title="Hello"/>}></Route> */}
-          <Route exact path={`/film-portfolio/${this.state.url}/gallery`} render={(props)=><Gallery enlargeImageIndex={this.state.enlargeImageIndex} getPhotos={this.getPhotos}  urls={this.state.urls} {...props} url={this.state.url} title="Hello"/>}></Route>
+          <Route exact path={`/film-portfolio/${this.state.url}/gallery`} render={(props)=><Gallery enlargeImageIndex={this.state.enlargeImageIndex} getPhotos={this.getPhotos}  urls={this.state.urlsLarge} {...props} url={this.state.url} title="Hello"/>}></Route>
         </Switch>
       </div>
     );
