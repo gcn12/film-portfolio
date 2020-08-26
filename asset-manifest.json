@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/film-portfolio/static/css/main.b87be98d.chunk.css",
+    "main.css": "/film-portfolio/static/css/main.61ba83e1.chunk.css",
     "main.js": "/film-portfolio/static/js/main.ea4c2644.chunk.js",
     "main.js.map": "/film-portfolio/static/js/main.ea4c2644.chunk.js.map",
     "runtime-main.js": "/film-portfolio/static/js/runtime-main.c5f149ed.js",
@@ -8,16 +8,16 @@
     "static/js/2.b9c9d6bb.chunk.js": "/film-portfolio/static/js/2.b9c9d6bb.chunk.js",
     "static/js/2.b9c9d6bb.chunk.js.map": "/film-portfolio/static/js/2.b9c9d6bb.chunk.js.map",
     "index.html": "/film-portfolio/index.html",
-    "precache-manifest.7aa96991932b5e1aad5ba275df6f148d.js": "/film-portfolio/precache-manifest.7aa96991932b5e1aad5ba275df6f148d.js",
+    "precache-manifest.1814c4330617fcb0f9c0bcf346bf76d1.js": "/film-portfolio/precache-manifest.1814c4330617fcb0f9c0bcf346bf76d1.js",
     "service-worker.js": "/film-portfolio/service-worker.js",
-    "static/css/main.b87be98d.chunk.css.map": "/film-portfolio/static/css/main.b87be98d.chunk.css.map",
+    "static/css/main.61ba83e1.chunk.css.map": "/film-portfolio/static/css/main.61ba83e1.chunk.css.map",
     "static/js/2.b9c9d6bb.chunk.js.LICENSE.txt": "/film-portfolio/static/js/2.b9c9d6bb.chunk.js.LICENSE.txt",
     "static/media/play-button.029be54c.svg": "/film-portfolio/static/media/play-button.029be54c.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.c5f149ed.js",
     "static/js/2.b9c9d6bb.chunk.js",
-    "static/css/main.b87be98d.chunk.css",
+    "static/css/main.61ba83e1.chunk.css",
     "static/js/main.ea4c2644.chunk.js"
   ]
 }
