@@ -5,7 +5,7 @@ import "./Thumbnail.scss"
 
 const Thumbnail = (props) => {
     return(
-        content.map((work, index) => {
+        Object.values(content).map((work, index) => {
             return(
                 <Link onClick={()=>props.getURL(work.url)} key={index} to={`/film-portfolio/${work.url}`}>
                     <div className="text-and-thumbnail">

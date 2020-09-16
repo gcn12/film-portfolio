@@ -24,27 +24,17 @@ class App extends Component {
   }
 
   getPhotos = () => {
-    let arrayIndex
+    let url
     if(window.location.href.split("/").length===6){
-      arrayIndex=1
+      url = window.location.href.split("/").reverse()[1]
     }else{
-      arrayIndex=0
+      url = window.location.href.split("/").reverse()[0]
     }
     this.setState({
-      url: window.location.href.split("/").reverse()[arrayIndex]
+      url: url
     })
-    let setID 
-    const urlArray = []
-    for (const item of content){
-      urlArray.push(item.url)
-    }
-    const index = urlArray.indexOf(window.location.href.split("/").reverse()[arrayIndex])
-    if(index!==-1){
-      this.setState({
-        urls: []
-      })
-      
-      setID=content[index].album
+    if(content[url]){
+      let setID=content[url].album
       fetch(`https://www.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=3e8a789d6f4ae2feba4c606393db4c70&photoset_id=${setID}&user_id=96067761%40N02&format=json&nojsoncallback=1`)
       .then(response=>response.json())
       .then(data=>{
@@ -86,7 +76,7 @@ class App extends Component {
           <Route exact path="/film-portfolio/films" render={(props)=> <Films {...props} getURL={this.getURL}/>}></Route>
           <Route exact path="/film-portfolio/contact" component={Contact}></Route>
           <Route exact path={`/film-portfolio/${this.state.url}`} render={(props)=><Work getEnlargeImageIndex={this.getEnlargeImageIndex} getPhotos={this.getPhotos}  urls={this.state.urls} {...props} url={this.state.url} title="Hello"/>}></Route>
-          <Route exact path={`/film-portfolio/${this.state.url}/gallery`} render={(props)=><Gallery enlargeImageIndex={this.state.enlargeImageIndex} getPhotos={this.getPhotos}  urls={this.state.urlsLarge} {...props} url={this.state.url} title="Hello"/>}></Route>
+          <Route exact path={`/film-portfolio/${this.state.url}/gallery`} render={(props)=><Gallery enlargeImageIndex={this.state.enlargeImageIndex} urls={this.state.urlsLarge} {...props} url={this.state.url} title="Hello"/>}></Route>
         </Switch>
       </div>
     );

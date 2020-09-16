@@ -11,6 +11,7 @@ class Work extends Component {
     state={
         images: [],
         thumbnail: true,
+        imageURLSs: []
     }
 
     componentDidMount(){
@@ -24,29 +25,29 @@ class Work extends Component {
     }
 
     render(){
-        const urlArray = []
-        for (const item of content){
-            urlArray.push(item.url)
-        }
-        const index = urlArray.indexOf(this.props.url)
+        // const urlArray = []
+        // for (const item of content){
+        //     urlArray.push(item.url)
+        // }
+        // const index = urlArray.indexOf(this.props.url)
         return(
             <div className="work">
                 <br></br>
-                <div className="work-title">{content[index].header}</div>
+                <div className="work-title">{content[this.props.url].header}</div>
                 <br></br>
                 {
-                    content[index].video.length>0
+                    content[this.props.url].video.length>0
                     ? 
                     (this.state.thumbnail ? 
                         <div className="thumbnail-container">
-                            <img className="thumbnail-work" onClick={this.thumbnailToVideo} key={index} alt="still" src={content[index].thumbnail}></img>
+                            <img className="thumbnail-work" onClick={this.thumbnailToVideo} alt="still" src={content[this.props.url].thumbnail}></img>
                             <PlayButton className="play-button" onClick={this.thumbnailToVideo} />
                         </div>
                         :
-                        <div className={content[index].sixteenNine ? "work16" : "work235"}>
+                        <div className={content[this.props.url].sixteenNine ? "work16" : "work235"}>
                         <iframe 
                         className="embed-work"
-                        src={`https://player.vimeo.com/video/${content[index].video}?autoplay=1`} 
+                        src={`https://player.vimeo.com/video/${content[this.props.url].video}?autoplay=1`} 
                         width="960" 
                         height="540" 
                         frameBorder="0" 
