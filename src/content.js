@@ -13,6 +13,7 @@ const content = {
         header: "The Fallen (Feature)",
         displayTitle: "The Fallen",
         video: "388770525", //vimeo link id
+        videoHost: 'vimeo',
         thumbnail: "https://live.staticflickr.com/65535/50208714186_4d58f0f266_k.jpg",
         album: "72157715437437658",
         sixteenNine: false,
@@ -31,6 +32,7 @@ const content = {
         header: "Love's Truth Behind (Music Video)",
         displayTitle: "Love's Truth Behind",
         video: "391693065",
+        videoHost: 'vimeo',
         thumbnail: "https://live.staticflickr.com/65535/50208723206_90bbcc26f8_k.jpg",
         album: "72157715437288708",
         sixteenNine: false,
@@ -40,6 +42,7 @@ const content = {
         header: "December (Short Film)",
         displayTitle: "December",
         video: "390813222",
+        videoHost: 'vimeo',
         thumbnail: "https://live.staticflickr.com/65535/50208199958_f09cc5c7b2_k.jpg",
         album: "72157715437186658",
         sixteenNine: false,
@@ -58,6 +61,7 @@ const content = {
         header: "Butterfly (Short Film)",
         displayTitle: "Butterfly",
         video: "387162188",
+        videoHost: 'vimeo',
         thumbnail: "https://live.staticflickr.com/65535/50220736487_6bf925f764_k.jpg",
         album: "72157715467643243",
         sixteenNine: true,
@@ -71,7 +75,29 @@ const content = {
         album: "72157715467676103",
         sixteenNine: true,
     },
+    idealconversation: {
+        url: "idealconversation",
+        header: "An Ideal Conversation (Short Film)",
+        displayTitle: "An Ideal Conversation",
+        video: "https://www.youtube.com/embed/UeVJnwMX5RU",
+        videoHost: 'youtube',
+        thumbnail: "https://live.staticflickr.com/65535/50395049843_94d04e201b_k.jpg", //comes from embed code
+        album: "72157716167409576",
+        sixteenNine: true,
+    },
+    oatmilk: {
+        url: "oatmilk",
+        header: "Oat Milk (Short Film)",
+        displayTitle: "Oat Milk",
+        video: "",
+        videoHost: '',
+        thumbnail: "https://live.staticflickr.com/65535/50395045703_ef675996f2_k.jpg", //comes from embed code
+        album: "72157716167646038",
+        sixteenNine: true,
+    },
 }
+
+//<iframe width="560" height="315" src="https://www.youtube.com/embed/UeVJnwMX5RU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
 
 // const content = [
 //     {

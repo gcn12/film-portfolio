@@ -45,6 +45,8 @@ class Work extends Component {
                         </div>
                         :
                         <div className={content[this.props.url].sixteenNine ? "work16" : "work235"}>
+                        {content[this.props.url].videoHost==='vimeo' 
+                        ? 
                         <iframe 
                         className="embed-work"
                         src={`https://player.vimeo.com/video/${content[this.props.url].video}?autoplay=1`} 
@@ -55,7 +57,11 @@ class Work extends Component {
                         title="video" 
                         allowFullScreen
                         />
-                    </div>
+                        // null
+                        :
+                        <iframe title='video' width="560" height="315" src={content[this.props.url].video} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+                        }
+                        </div>
                     )
                     :
                     <div></div>
