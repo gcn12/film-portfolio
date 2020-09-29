@@ -68,6 +68,10 @@ class App extends Component {
   }
   
   componentDidMount() {
+    this.setState({
+      urls: [],
+      urlsLarge: [],
+    })
     this.getPhotos()
   }
   
