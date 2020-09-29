@@ -24,6 +24,10 @@ class App extends Component {
   }
 
   getPhotos = () => {
+    this.setState({
+      urls: [],
+      urlsLarge: []
+    })
     let url
     if(window.location.href.split("/").length===6){
       url = window.location.href.split("/").reverse()[1]
