@@ -91,8 +91,8 @@ const content = {
         displayTitle: "Oat Milk",
         video: "",
         videoHost: '',
-        thumbnail: "https://live.staticflickr.com/65535/50395045703_ef675996f2_k.jpg", //comes from embed code
-        album: "72157716167646038",
+        thumbnail: "https://live.staticflickr.com/65535/50397304353_d79b3603ef_k.jpg", //comes from embed code
+        album: "72157716179489073",
         sixteenNine: true,
     },
 }
