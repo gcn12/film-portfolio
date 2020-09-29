@@ -5,7 +5,7 @@ import Thumbnail from "./Thumbnail"
 const Films = (props) => {
     return(
         <div className="films">
-            <Thumbnail getURL={props.getURL}/>
+            <Thumbnail clearURLs={props.clearURLs} getURL={props.getURL}/>
         </div>
     )
 }
