@@ -83,11 +83,11 @@ class App extends Component {
       <div>
         <Header />
         <Switch>
-          <Route exact path="/film-portfolio" component={HomePage}></Route>
-          <Route exact path="/film-portfolio/films" render={(props)=> <Films {...props} clearURLs={this.clearURLs} getURL={this.getURL}/>}></Route>
-          <Route exact path="/film-portfolio/contact" component={Contact}></Route>
-          <Route exact path={`/film-portfolio/${this.state.url}`} render={(props)=><Work getEnlargeImageIndex={this.getEnlargeImageIndex} getPhotos={this.getPhotos}  urls={this.state.urls} {...props} url={this.state.url} title="Hello"/>}></Route>
-          <Route exact path={`/film-portfolio/${this.state.url}/gallery`} render={(props)=><Gallery enlargeImageIndex={this.state.enlargeImageIndex} urls={this.state.urlsLarge} {...props} url={this.state.url} title="Hello"/>}></Route>
+          <Route exact path="/" component={HomePage}></Route>
+          <Route exact path="/films" render={(props)=> <Films {...props} clearURLs={this.clearURLs} getURL={this.getURL}/>}></Route>
+          <Route exact path="/contact" component={Contact}></Route>
+          <Route exact path={`/${this.state.url}`} render={(props)=><Work getEnlargeImageIndex={this.getEnlargeImageIndex} getPhotos={this.getPhotos}  urls={this.state.urls} {...props} url={this.state.url} title="Hello"/>}></Route>
+          <Route exact path={`/${this.state.url}/gallery`} render={(props)=><Gallery enlargeImageIndex={this.state.enlargeImageIndex} urls={this.state.urlsLarge} {...props} url={this.state.url} title="Hello"/>}></Route>
         </Switch>
       </div>
     );
