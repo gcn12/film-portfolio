@@ -82,20 +82,20 @@ class App extends Component {
     return (
       <div>
         <Header />
-        <Switch>
-          <Route exact path={process.env.PUBLIC_URL} component={HomePage}></Route>
+        {/* <Switch>
+          <Route exact path={basename + '/'} component={HomePage}></Route>
           <Route exact path={process.env.PUBLIC_URL + '/films'} render={(props)=> <Films {...props} clearURLs={this.clearURLs} getURL={this.getURL}/>}></Route>
           <Route exact path="/contact" component={Contact}></Route>
           <Route exact path={`/${this.state.url}`} render={(props)=><Work getEnlargeImageIndex={this.getEnlargeImageIndex} getPhotos={this.getPhotos}  urls={this.state.urls} {...props} url={this.state.url} title="Hello"/>}></Route>
           <Route exact path={`/${this.state.url}/gallery`} render={(props)=><Gallery enlargeImageIndex={this.state.enlargeImageIndex} urls={this.state.urlsLarge} {...props} url={this.state.url} title="Hello"/>}></Route>
-        </Switch>
-        {/* <Switch>
+        </Switch> */}
+        <Switch>
           <Route exact path="/" component={HomePage}></Route>
           <Route exact path="/films" render={(props)=> <Films {...props} clearURLs={this.clearURLs} getURL={this.getURL}/>}></Route>
           <Route exact path="/contact" component={Contact}></Route>
           <Route exact path={`/${this.state.url}`} render={(props)=><Work getEnlargeImageIndex={this.getEnlargeImageIndex} getPhotos={this.getPhotos}  urls={this.state.urls} {...props} url={this.state.url} title="Hello"/>}></Route>
           <Route exact path={`/${this.state.url}/gallery`} render={(props)=><Gallery enlargeImageIndex={this.state.enlargeImageIndex} urls={this.state.urlsLarge} {...props} url={this.state.url} title="Hello"/>}></Route>
-        </Switch> */}
+        </Switch>
       </div>
     );
   }
