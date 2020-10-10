@@ -70,34 +70,34 @@
     height: 100%;
 }
 
+// .test {
+    // justify-content: center;
+    // display: flex;
+    // align-items: center;
+// }
+
 .stills {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     align-content: flex-start;
-    // width: 0 8vw;
-    // height: auto;s
 }
 
 @media only screen and (max-width: 700px){
     .still {
         padding: 1px 1px;
-        // padding: 0;
-        // width: 80%;
     }
 }
 
 @media only screen and (min-width: 700px){
     .still {
         padding: 1px 1px;
-        // width: 26.5vw;
     }
 }
 
 @media only screen and (min-width: 1000px){
     .still {
-        // padding: 1px 1px;
         padding: 0px 1px 0px 1px;
         width: 26.5vw;
     }
@@ -105,7 +105,6 @@
 
 @media only screen and (max-width: 1000px){
     .still {
-        // padding: 1px 1px;
         padding: 0px 1px 0px 1px;
         width: 40vw;
     }
@@ -119,9 +118,6 @@
 }
 
 .still {
-    // width: 26.5vw;
-    // max-height: 180px;
-    // max-width: 400px;
     animation: fadeInAnimation ease 4s; 
     animation-iteration-count: 1; 
     animation-fill-mode: forwards; 

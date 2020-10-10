@@ -11,7 +11,7 @@ class Thumbnail extends Component {
         return(
             Object.values(content).map((work, index) => {
                 return(
-                    <Link onClick={()=>this.props.getURL(work.url)} key={index} to={`/${work.url}`}>
+                    <Link key={index} to={`/${work.url}`}>
                         <div className="text-and-thumbnail">
                             <div className="blur-container">
                                 <div className="image-scale-container">
