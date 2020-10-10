@@ -7,7 +7,8 @@ import "./Gallery.scss"
 class Gallery extends Component {
 
     state = {
-        urls: []
+        urls: [],
+        isLoaded: false,
     }
     
     getPhotos = () => {
@@ -23,9 +24,6 @@ class Gallery extends Component {
                   .then(response=>response.json())
                   .then(data=>{
                     urlArray.push(data.sizes.size[12].source)
-                    // this.setState({
-                    //   urls: urlArray,
-                    // })
                     this.props.getURLSLarge([data.sizes.size[12].source])
                   })
                   return(photo.id)
@@ -33,6 +31,12 @@ class Gallery extends Component {
               })
             }
         }
+    }
+
+    isLoaded = () => {
+        this.setState({
+            isLoaded: true
+        })
     }
 
     nextImage = () => {
@@ -59,9 +63,9 @@ class Gallery extends Component {
         return(
             <div>
                 <div className="back" onClick={this.props.history.goBack}>Back</div>
-                <div className="enlarged-container">
+                <div className={`enlarged-container ${this.state.isLoaded ? 'fade-in' : null}`}>
                     <div className="nav-button" onClick={this.previousImage}>{"<"}</div>
-                    <img className="enlarged-image" alt="large display" src={this.props.urls[this.props.index]}></img>
+                    <img onLoad={this.isLoaded} className="enlarged-image" alt="large display" src={this.props.urls[this.props.index]}></img>
                     <div className="nav-button" onClick={this.nextImage}>{">"}</div>
                 </div>
             </div>
