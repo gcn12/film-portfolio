@@ -44,7 +44,7 @@ class App extends Component {
           <Route exact path="/films" render={(props)=> <Films {...props} clearURLs={this.clearURLs} getURL={this.getURL}/>}></Route>
           <Route exact path="/contact" component={Contact}></Route>
           <Route exact path='/:workPage' render={(props)=><Work getEnlargeImageIndex={this.getEnlargeImageIndex} getURLLarge={this.getURLSLarge} getPhotos={this.getPhotos}  urls={this.state.urls} {...props} url={this.state.url} title="Hello"/>}></Route>
-          <Route exact path='/:workPage/gallery' render={(props)=><Gallery enlargeImageIndex={this.state.enlargeImageIndex} urls={this.state.urlsLarge} {...props} url={this.state.url} title="Hello"/>}></Route>
+          <Route exact path='/:workPage/gallery' render={(props)=><Gallery enlargeImageIndex={this.state.enlargeImageIndex} getURLSLarge={this.getURLSLarge} urls={this.state.urlsLarge} {...props} url={this.state.url} title="Hello"/>}></Route>
         </Switch>
       </div>
     );
