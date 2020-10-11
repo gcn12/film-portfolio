@@ -94,6 +94,7 @@ const content = {
         thumbnail: "https://live.staticflickr.com/65535/50397304353_d79b3603ef_k.jpg", //comes from embed code
         album: "72157716179489073",
         sixteenNine: true,
+        isLoad: true,
     },
 }
 

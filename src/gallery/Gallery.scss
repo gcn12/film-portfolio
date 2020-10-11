@@ -30,3 +30,13 @@
     cursor: pointer;
     // width: 81vw;
 }
+
+.hide-gallery {
+    visibility: hidden;
+}
+
+.fade-in-gallery {
+    animation: fadeInAnimation ease 2s; 
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards; 
+}

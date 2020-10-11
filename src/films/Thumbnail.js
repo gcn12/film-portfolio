@@ -17,16 +17,17 @@ class Thumbnail extends Component {
 
     componentDidMount() {
         this.props.clearURLs()
+        // console.log(Object.values(content))
     }
     render() {
         return(
             Object.values(content).map((work, index) => {
                 return(
                     <Link key={index} to={`/${work.url}`}>
-                        <div className={`text-and-thumbnail ${this.state.imagesLoaded ? 'fade-in' : null} `}>
+                        <div className={`text-and-thumbnail ${this.state.imagesLoaded ? 'fade-in' : 'hide'} `}>
                             <div className="blur-container">
                                 <div className="image-scale-container">
-                                    <img onLoad={this.imagesLoaded}  className="thumbnail" alt="display" src={work.thumbnail}></img>
+                                    <img onLoad={index===8 ? this.imagesLoaded : null}  className="thumbnail" alt="display" src={work.thumbnail}></img>
                                 </div>
                             </div>
                             <div className="text">{work.displayTitle.toUpperCase()}</div>

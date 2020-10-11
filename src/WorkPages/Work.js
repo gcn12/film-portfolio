@@ -58,7 +58,7 @@ class Work extends Component {
                     content[this.props.match.params.workPage].video.length>0
                     ? 
                     (this.state.thumbnail ? 
-                        <div className="thumbnail-container">
+                        <div className="thumbnail-container fade-in-work">
                             <img className="thumbnail-work" onClick={this.thumbnailToVideo} alt="still" src={content[this.props.match.params.workPage].thumbnail}></img>
                             <PlayButton className="play-button" onClick={this.thumbnailToVideo} />
                         </div>
@@ -85,14 +85,14 @@ class Work extends Component {
                     <div></div>
                 }
                 <br></br>
-                <div className="test">
+                <div>
                     <div className="stills">
                     {
                         this.state.urls.map((image, index)=> {
                             return(
                                 // <img style={{animation: `fadeInAnimation ease ${(Math.random()*2)+1}s` }} className="still" key={index} alt="still" src={image}></img>
                                 <Link onClick={()=>this.props.dispatch(startIndex(index))} key={index} to={`${this.props.match.params.workPage}/gallery`}>
-                                    <img className="still" id={index} key={index} alt="still" src={image}></img>
+                                    <img className="still fade-in-work" id={index} key={index} alt="still" src={image}></img>
                                 </Link>
                                 )
                             })
