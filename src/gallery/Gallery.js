@@ -14,24 +14,32 @@ class Gallery extends Component {
     getPhotos = () => {
         if (this.props.urls.length===0) {
             if(content[this.props.match.params.workPage]){
-                this.props.dispatch(startIndex(0))
+                // this.props.dispatch(startIndex(0))
                 let setID=content[this.props.match.params.workPage].album
                 fetch(`https://www.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=3e8a789d6f4ae2feba4c606393db4c70&photoset_id=${setID}&user_id=96067761%40N02&format=json&nojsoncallback=1`)
                 .then(response=>response.json())
                 .then(data=>{
-                const urlArray = []
-                data.photoset.photo.map(photo=>{
-                    fetch(`https://www.flickr.com/services/rest/?method=flickr.photos.getSizes&api_key=3e8a789d6f4ae2feba4c606393db4c70&photo_id=${photo.id}&format=json&nojsoncallback=1`)
-                    .then(response=>response.json())
-                    .then(data=>{
-                    urlArray.push(data.sizes.size[12].source)
-                    this.props.getURLSLarge([data.sizes.size[12].source])
+                    const urlArray = []
+                    data.photoset.photo.map(photo=>{
+                        fetch(`https://www.flickr.com/services/rest/?method=flickr.photos.getSizes&api_key=3e8a789d6f4ae2feba4c606393db4c70&photo_id=${photo.id}&format=json&nojsoncallback=1`)
+                        .then(response=>response.json())
+                        .then(data=>{
+                        urlArray.push(data.sizes.size[12].source)
+                        this.props.getURLSLarge([data.sizes.size[12].source])
+                        })
+                        return(photo.id)
                     })
-                    return(photo.id)
-                })
                 })
             }
         }
+    }
+
+    getPhotosAsync = () => {
+        const runFunction = async () => {
+            await this.props.dispatch(startIndex(0))
+            await this.getPhotos()
+        }
+        runFunction()
     }
 
     isLoaded = () => {
