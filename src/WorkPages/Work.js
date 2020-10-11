@@ -90,7 +90,6 @@ class Work extends Component {
                     {
                         this.state.urls.map((image, index)=> {
                             return(
-                                // <img style={{animation: `fadeInAnimation ease ${(Math.random()*2)+1}s` }} className="still" key={index} alt="still" src={image}></img>
                                 <Link onClick={()=>this.props.dispatch(startIndex(index))} key={index} to={`${this.props.match.params.workPage}/gallery`}>
                                     <img className="still fade-in-work" id={index} key={index} alt="still" src={image}></img>
                                 </Link>
