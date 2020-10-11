@@ -41,9 +41,9 @@ class Gallery extends Component {
     }
 
     nextImage = () => {
-        if(this.props.index<this.state.urls.length-1){
+        if(this.props.index<this.props.urls.length-1){
             this.props.dispatch(next())
-        }else if (this.props.index===this.state.urls.length-1){
+        }else if (this.props.index===this.props.urls.length-1){
             this.props.dispatch(startIndex(0))
         }
     }
@@ -52,7 +52,7 @@ class Gallery extends Component {
         if(this.props.index>0){
             this.props.dispatch(previous())
         }else if (this.state.index===0){
-            this.props.dispatch(startIndex(this.state.urls.length-1))
+            this.props.dispatch(startIndex(this.props.urls.length-1))
         }
     }
 
