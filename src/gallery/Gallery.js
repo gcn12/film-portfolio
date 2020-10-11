@@ -51,7 +51,7 @@ class Gallery extends Component {
     previousImage = () => {
         if(this.props.index>0){
             this.props.dispatch(previous())
-        }else if (this.state.index===0){
+        }else if (this.props.index===0){
             this.props.dispatch(startIndex(this.props.urls.length-1))
         }
     }
