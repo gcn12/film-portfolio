@@ -25,21 +25,13 @@ class Gallery extends Component {
                         .then(response=>response.json())
                         .then(data=>{
                         urlArray.push(data.sizes.size[12].source)
-                        this.props.getURLSLarge([data.sizes.size[12].source])
+                        this.props.getURLSLarge(urlArray)
                         })
                         return(photo.id)
                     })
                 })
             }
         }
-    }
-
-    getPhotosAsync = () => {
-        const runFunction = async () => {
-            await this.props.dispatch(startIndex(0))
-            await this.getPhotos()
-        }
-        runFunction()
     }
 
     isLoaded = () => {
