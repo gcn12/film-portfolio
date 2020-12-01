@@ -32,9 +32,10 @@
 }
 
 .text{
+    opacity: 0;
     font-size: 100%;
     font-family: Lato;
-    visibility: hidden;
+    // visibility: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -48,16 +49,19 @@
     width: 70%;
     height: 70%;
     transform: translate(-50%, -50%);
+    transition: opacity 800ms;
 }
 
 @media only screen and (max-width: 870px){
     .text{
-        visibility: visible;
+        // visibility: visible;
+        opacity: 1;
     }
 }
 
 .text-and-thumbnail:hover .text {
-    visibility: visible;
+    // visibility: visible;
+    opacity: 1;
 }
 
 

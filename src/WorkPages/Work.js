@@ -40,6 +40,7 @@ class Work extends Component {
 
     componentDidMount(){
         this.getPhotos()
+        window.scrollTo({top: 0})
     }
 
     thumbnailToVideo = () => {

@@ -20,10 +20,6 @@
     opacity: .8;
 }
 
-.work{
-    margin-bottom: 40px;
-}
-
 .work-title {
     display: table;
     margin-right: auto;
@@ -71,43 +67,68 @@
 }
 
 .stills {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    align-content: flex-start;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // flex-wrap: wrap;
+    // align-content: flex-start;
+    display: grid;
+    grid-gap: 5px;
+    align-items: stretch;
+    justify-items: center;
+    column-gap: 1px;
+    
 }
 
-@media only screen and (max-width: 700px){
-    .still {
-        padding: 1px 1px;
-    }
-}
+// @media only screen and (max-width: 700px){
+//     .still {
+//         // padding: 1px 1px;
+//     }
+// }
 
-@media only screen and (min-width: 700px){
-    .still {
-        padding: 1px 1px;
-    }
-}
+// @media only screen and (min-width: 700px){
+//     .still {
+//         padding: 1px 1px;
+//     }
+// }
 
 @media only screen and (min-width: 1000px){
+    .stills {
+        grid-template-columns: repeat(auto-fill, minmax(25vw, 4fr));
+    }
     .still {
         padding: 0px 1px 0px 1px;
         width: 26.5vw;
+        // width: 30vw;
+    }
+    .work {
+        margin: 0 9vw 20px 9vw;
     }
 }
 
 @media only screen and (max-width: 1000px){
+    .stills {
+        grid-template-columns: repeat(auto-fill, minmax(40vw, 1fr));
+    }
     .still {
         padding: 0px 1px 0px 1px;
         width: 40vw;
     }
+    .work {
+        margin: 0 9vw 20px 9vw;
+    }
 }
 
 @media only screen and (max-width: 750px){
+    .stills {
+        grid-template-columns: repeat(auto-fill, minmax(80vw, 1fr));
+    }
     .still {
         padding: 0px 1px 0px 1px;
         width: 79.8vw;
+    }
+    .work {
+        margin: 0 0 20px 0;
     }
 }
 
