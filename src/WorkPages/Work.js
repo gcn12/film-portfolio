@@ -1,16 +1,24 @@
 import React, { Component } from "react"
 import content from "../content"
-import "./Work.scss"
+import "./Work.css"
 import {ReactComponent as PlayButton } from "../play-button.svg"
 import { Link } from "react-router-dom"
 import { connect } from "react-redux"
 import { startIndex } from "../redux/enlargeImageActions"
+import WorkImagesSmall from './WorkImagesSmall'
+import { 
+    Title,
+    VideoThumnail,
+    Video,
+    Container,
+} from './Work.styles'
 
 class Work extends Component {
     state={
         thumbnail: true,
         urls: [],
         urlsLarge: [],
+        isThumbnailLoaded: false,
     }
 
     getPhotos = () => {
@@ -51,39 +59,40 @@ class Work extends Component {
 
     render(){
         return(
-            <div className="work">
+            // <div className="work">
+            <Container>
                 <br></br>
-                <div className="work-title">{content[this.props.match.params.workPage].header}</div>
+                <Title>{content[this.props.match.params.workPage].header}</Title>
                 <br></br>
                 {
                     content[this.props.match.params.workPage].video.length>0
                     ? 
                     (this.state.thumbnail ? 
-                        <div className="thumbnail-container fade-in-work">
-                            <img className="thumbnail-work" onClick={this.thumbnailToVideo} alt="still" src={content[this.props.match.params.workPage].thumbnail}></img>
+                        <div className="thumbnail-container">
+                            <VideoThumnail opacity={this.state.isThumbnailLoaded ? 1: 0} height={content[this.props.match.params.workPage].sixteenNine ? 1.77 : 2.35}  onLoad={()=>this.setState({isThumbnailLoaded: true})} onClick={this.thumbnailToVideo} alt='' src={content[this.props.match.params.workPage].thumbnail} />
                             <PlayButton className="play-button" onClick={this.thumbnailToVideo} />
                         </div>
                         :
                         <div className={content[this.props.match.params.workPage].sixteenNine ? "work16" : "work235"}>
                         {content[this.props.match.params.workPage].videoHost==='vimeo' 
                         ? 
-                        <iframe 
-                        className="embed-work"
+                        <Video 
+                        // className="embed-work"
                         src={`https://player.vimeo.com/video/${content[this.props.match.params.workPage].video}?autoplay=1`} 
-                        width="960" 
-                        height="540" 
+                        // width="960" 
+                        height={content[this.props.match.params.workPage].sixteenNine ? 1.77 : 2.35} 
                         frameBorder="0" 
                         allow="autoplay; fullscreen" 
                         title="video" 
                         allowFullScreen
                         />
                         :
-                        <iframe title='video' width="560" height="315" src={content[this.props.match.params.workPage].video} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+                        <Video height={content[this.props.match.params.workPage].sixteenNine ? 1.77 : 2.35}  title='video' src={content[this.props.match.params.workPage].video} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen /> 
                         }
                         </div>
                     )
                     :
-                    <div></div>
+                    null
                 }
                 <br></br>
                 <div>
@@ -92,14 +101,15 @@ class Work extends Component {
                         this.state.urls.map((image, index)=> {
                             return(
                                 <Link onClick={()=>this.props.dispatch(startIndex(index))} key={index} to={`${this.props.match.params.workPage}/gallery`}>
-                                    <img className="still fade-in-work" id={index} key={index} alt="still" src={image}></img>
+                                    <WorkImagesSmall image={image} />
+                                    {/* <Images className="still" id={index} key={index} alt="still" src={image} /> */}
                                 </Link>
                                 )
                             })
                         }   
                     </div>
                 </div>
-            </div>
+            </Container>
         )
     }
 }

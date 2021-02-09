@@ -1,22 +1,27 @@
 import React from "react"
-import "./Contact.css"
+// import "./Contact.css"
+import {
+    Container,
+    ContactLine,
+    NoSelect,
+} from './Contact.styles'
 
 const Contact = () => {
     return(
-        <div style={{position: 'relative'}}>
-            <div className="contact">
-                <span className="testcontact">
-                <div className="email">
-                    <div className="no-select">e:</div>
-                    garethcng@gmail.com
+        <Container>
+            <div>
+                <div>
+                    <ContactLine>
+                        <NoSelect>e:</NoSelect>
+                        garethcng@gmail.com
+                    </ContactLine>
                 </div>
-                <div className="instagram">
-                    <div className="no-select">ig:</div> 
+                <div>
+                    <NoSelect>ig:</NoSelect> 
                     instagram.com/gareth.ng
                 </div>
-                </span>
             </div>
-        </div>
+        </Container>
     )
 }
 

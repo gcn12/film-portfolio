@@ -1,40 +1,34 @@
 import React, { Component } from "react"
-import content from "../content"
 import {Link} from "react-router-dom"
-import "./Thumbnail.scss"
+import "./Thumbnail.css"
+import {
+    Image,
+    Title,
+    ImageContainer,
+} from './Thumbnail.styles'
 
 class Thumbnail extends Component {
 
     state = {
-        imagesLoaded: false,
-    }
-
-    imagesLoaded = () => {
-        this.setState({
-            imagesLoaded: true,
-        })
+        isImageLoaded: false,
+        fadeIn: 0
     }
 
     componentDidMount() {
         this.props.clearURLs()
-        // console.log(Object.values(content))
+        const fadeNumber = Math.round(Math.random()*400) + 400
+        this.setState({
+            fadeIn: fadeNumber,
+        })
     }
     render() {
         return(
-            Object.values(content).map((work, index) => {
-                return(
-                    <Link key={index} to={`/${work.url}`}>
-                        <div className={`text-and-thumbnail ${this.state.imagesLoaded ? 'fade-in' : 'hide'} `}>
-                            <div className="blur-container">
-                                <div className="image-scale-container">
-                                    <img onLoad={index===8 ? this.imagesLoaded : null}  className="thumbnail" alt="display" src={work.thumbnail}></img>
-                                </div>
-                            </div>
-                            <div className="text">{work.displayTitle.toUpperCase()}</div>
-                        </div>
-                    </Link>
-                )
-            })
+            <Link to={`/${this.props.work.url}`}>
+                <ImageContainer>
+                    <Image fadeIn={this.state.fadeIn} opacity={this.state.isImageLoaded ? 1 : 0} onLoad={()=>this.setState({isImageLoaded: true})}  alt='' src={this.props.work.thumbnail} />
+                    <Title>{this.props.work.displayTitle.toUpperCase()}</Title>
+                </ImageContainer>
+            </Link>
         )
     }
 }

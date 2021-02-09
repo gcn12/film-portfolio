@@ -2,7 +2,15 @@ import React, { Component } from "react"
 import { connect } from "react-redux"
 import { next, previous, startIndex} from "../redux/enlargeImageActions"
 import content from '../content'
-import "./Gallery.scss"
+import { ReactComponent as Arrow } from '../Arrow.svg'
+import "./Gallery.css"
+import {
+    ImageContainer,
+    ArrowLeft,
+    ArrowRight,
+    Container,
+    Back,
+} from './Gallery.styles'
 
 class Gallery extends Component {
 
@@ -34,12 +42,6 @@ class Gallery extends Component {
         }
     }
 
-    isLoaded = () => {
-        this.setState({
-            isLoaded: true
-        })
-    }
-
     nextImage = () => {
         if(this.props.index<this.props.urls.length-1){
             this.props.dispatch(next())
@@ -62,14 +64,18 @@ class Gallery extends Component {
 
     render(){
         return(
-            <div>
-                <div className="back" onClick={this.props.history.goBack}>Back</div>
-                <div className={`enlarged-container ${this.state.isLoaded ? 'fade-in-gallery' : 'hide-gallery'}`}>
-                    <div className="nav-button" onClick={this.previousImage}>{"<"}</div>
-                    <img onLoad={this.isLoaded} className="enlarged-image" alt="large display" src={this.props.urls[this.props.index]}></img>
-                    <div className="nav-button" onClick={this.nextImage}>{">"}</div>
-                </div>
-            </div>
+            <Container opacity={this.state.isLoaded ? 1 : 0}>
+                <Back onClick={this.props.history.goBack}>Back</Back>
+                    <ImageContainer>
+                        <ArrowLeft>
+                            <Arrow onClick={this.previousImage} />
+                        </ArrowLeft>
+                        <img onLoad={()=>this.setState({isLoaded: true})} className="enlarged-image" alt="large display" src={this.props.urls[this.props.index]}></img>
+                        <ArrowRight>
+                            <Arrow onClick={this.nextImage} />
+                        </ArrowRight>
+                    </ImageContainer>
+            </Container>
         )
     }
 }

@@ -8,10 +8,8 @@
     right:-100px;
     top:-100px;
     bottom:-100px;
-    // padding: 1px;
     width: 100%;
     height: auto;
-    // max-width: 600px;
 }
 
 .hide {
@@ -35,7 +33,6 @@
     opacity: 0;
     font-size: 100%;
     font-family: Lato;
-    // visibility: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -52,15 +49,7 @@
     transition: opacity 800ms;
 }
 
-@media only screen and (max-width: 870px){
-    .text{
-        // visibility: visible;
-        opacity: 1;
-    }
-}
-
 .text-and-thumbnail:hover .text {
-    // visibility: visible;
     opacity: 1;
 }
 

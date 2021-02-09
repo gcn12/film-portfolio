@@ -1,20 +1,29 @@
 import React from "react"
 import {Link} from "react-router-dom"
-import "./Header.scss"
+// import "./Header.css"
+import {
+    Container,
+    Title,
+    SubTitle,
+    PageLink,
+    HeaderRight,
+    HeaderContainer,
+} from './Header.styles'
 
 const Header = () => {
     return(
-        <div className="header">
-            <div className="logo-and-subtitle">
-                <Link className="logo" to="/">GARETH NG</Link>
-                <div className="break"></div>
-                <div className="subtitle">Cinematographer</div>
-            </div>
-            <div className="links">
-                <Link className="link" to="/films"><span>WORK</span></Link>
-                <Link className="link" to="/contact">CONTACT</Link>
-            </div>
-        </div>
+        <Container>
+            <HeaderContainer>
+                <Link to="/" style={{textDecoration: 'none'}}><Title>GARETH NG</Title></Link>
+                <SubTitle mediaQuery='min-width: 870px'>Cinematographer</SubTitle>
+                <HeaderRight>
+                    <Link to="/films" style={{textDecoration: 'none'}}><PageLink>WORK</PageLink></Link>
+                    <div style={{marginLeft: '20px'}}></div>
+                    <Link to="/contact" style={{textDecoration: 'none'}}><PageLink>CONTACT</PageLink></Link>
+                </HeaderRight>
+            </HeaderContainer>
+            <SubTitle mediaQuery='max-width: 870px'>Cinematographer</SubTitle>
+        </Container>
     )
 }
 
