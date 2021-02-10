@@ -67,7 +67,7 @@ class Work extends Component {
         return(
             // <div className="work">
             <Container>
-                <Title>{content[this.props.match.params.workPage].header}</Title>
+                <Title>{content[this.props.match.params.workPage].header.toUpperCase()}</Title>
                 {
                     content[this.props.match.params.workPage].video.length>0
                     ? 
