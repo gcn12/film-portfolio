@@ -106,7 +106,6 @@ class Work extends Component {
                             return(
                                 <Link onClick={()=>this.selectImage(index)} key={index} to={`${this.props.match.params.workPage}/gallery`}>
                                     <WorkImagesSmall image={image} />
-                                    {/* <Images className="still" id={index} key={index} alt="still" src={image} /> */}
                                 </Link>
                                 )
                             })

@@ -10,8 +10,13 @@ export const Container = styled.div`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* width: 100%;
-    height: 80%; */
+`
+
+export const Container2 = styled.div`
+    /* @media(max-height: 500px){ */
+        min-height: calc(80vw / 2.35 + 200px);
+        position: relative;
+    /* } */
 `
 
 export const ThumbnailContainer = styled.div`
@@ -20,8 +25,6 @@ export const ThumbnailContainer = styled.div`
 
 export const Thumbnail = styled.img`
     cursor: pointer;
-    /* height: 409px;
-    width: 960px; */
     width: 80vw;
     height: calc(80vw / 2.35);
 `
@@ -32,4 +35,7 @@ export const PlayButtonStyles = styled.div`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    @media(max-width: 870px) {
+        transform: scale(.9) translate(-50%, -50%);
+    }
 `
