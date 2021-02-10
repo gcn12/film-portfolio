@@ -99,7 +99,7 @@ const content = {
     palmtrees: {
         url: "palmtrees",
         header: "Palm Trees (music video)",
-        displayTitle: "Oak Milk",
+        displayTitle: "Palm Trees",
         video: "",
         videoHost: '',
         thumbnail: "https://live.staticflickr.com/65535/50929773916_3199fa9fcd_c.jpg", //comes from embed code
@@ -110,7 +110,7 @@ const content = {
     pesos: {
         url: "pesos",
         header: "Pesos (music video)",
-        displayTitle: "Oak Milk",
+        displayTitle: "Pesos",
         video: "",
         videoHost: '',
         thumbnail: "https://live.staticflickr.com/65535/50929784106_2bf2131594_c.jpg",

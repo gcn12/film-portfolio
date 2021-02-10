@@ -7,6 +7,7 @@ export const Title = styled.div`
     transform: translate(-50%, -50%);
     color: white;
     opacity: 0;
+    white-space: nowrap;
     @media(max-width: 870px) {
         opacity: 1;
     }
