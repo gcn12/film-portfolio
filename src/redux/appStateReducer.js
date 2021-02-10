@@ -3,11 +3,14 @@ import * as actions from "./appStateActions"
 const initialState = {
     url: "",
     id: [],
-    urls: []
+    urls: [],
+    isSixteenNine: true,
 } 
 
 export default function appStateReducer(state=initialState, action){
     switch(action.type){
+        case actions.IS_SIXTEEN_NINE:
+            return {...state, isSixteenNine: action.payload}
         case actions.ADD_URL:
             return {...state, url: action.payload}
         case actions.ADD_ID:

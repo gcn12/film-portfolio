@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
     /* width: 80vw; */
+    margin-bottom: 36px;
 `
 
 export const Video = styled.iframe`
@@ -41,4 +42,5 @@ export const Title = styled.div`
     display: flex;
     justify-content: center;
     font-size: 24px;
+    margin: 36px 0 24px 0;
 `

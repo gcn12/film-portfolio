@@ -5,6 +5,7 @@ import {ReactComponent as PlayButton } from "../play-button.svg"
 import { Link } from "react-router-dom"
 import { connect } from "react-redux"
 import { startIndex } from "../redux/enlargeImageActions"
+import { isSixteenNine } from '../redux/appStateActions'
 import WorkImagesSmall from './WorkImagesSmall'
 import { 
     Title,
@@ -57,13 +58,16 @@ class Work extends Component {
         })
     }
 
+    selectImage = (index) => {
+        this.props.dispatch(startIndex(index))
+        this.props.dispatch(isSixteenNine(content[this.props.match.params.workPage].sixteenNine))
+    }
+
     render(){
         return(
             // <div className="work">
             <Container>
-                <br></br>
                 <Title>{content[this.props.match.params.workPage].header}</Title>
-                <br></br>
                 {
                     content[this.props.match.params.workPage].video.length>0
                     ? 
@@ -100,7 +104,7 @@ class Work extends Component {
                     {
                         this.state.urls.map((image, index)=> {
                             return(
-                                <Link onClick={()=>this.props.dispatch(startIndex(index))} key={index} to={`${this.props.match.params.workPage}/gallery`}>
+                                <Link onClick={()=>this.selectImage(index)} key={index} to={`${this.props.match.params.workPage}/gallery`}>
                                     <WorkImagesSmall image={image} />
                                     {/* <Images className="still" id={index} key={index} alt="still" src={image} /> */}
                                 </Link>

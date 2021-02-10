@@ -3,12 +3,12 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  margin-bottom: 40px;
+  margin: 0px 0 40px 0;
 }
 
 
 @media only screen and (min-width: 870px){
   .films{
-    margin: 0 80px 20px 80px;
+    margin: 36px 0px 20px 0px;
   }
 }

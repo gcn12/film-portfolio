@@ -3,25 +3,27 @@ import React from "react"
 import {
     Container,
     ContactLine,
+    Container2,
     NoSelect,
 } from './Contact.styles'
 
 const Contact = () => {
     return(
-        <Container>
-            <div>
+        <Container2>
+            <Container>
                 <div>
                     <ContactLine>
                         <NoSelect>e:</NoSelect>
                         garethcng@gmail.com
                     </ContactLine>
+                    <div style={{marginBottom: '5px'}}></div>
+                    <ContactLine>
+                        <NoSelect>ig:</NoSelect> 
+                        instagram.com/gareth.ng
+                    </ContactLine>
                 </div>
-                <div>
-                    <NoSelect>ig:</NoSelect> 
-                    instagram.com/gareth.ng
-                </div>
-            </div>
-        </Container>
+            </Container>
+        </Container2>
     )
 }
 

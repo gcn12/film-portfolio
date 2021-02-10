@@ -25,9 +25,9 @@ export const Image = styled.img`
 
 export const ImageContainer = styled.div`
     position: relative;
-    margin: 0 5px 5px 0;
+    margin: 0 2px 4px 2px;
     @media(max-width: 870px) {
-        margin: 0 0px 1px 0;
+        margin: 0;
     }
     &:hover{
         ${Title} {

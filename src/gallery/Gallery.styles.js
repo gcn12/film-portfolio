@@ -5,6 +5,11 @@ export const Back = styled.div`
 `
 
 export const Container = styled.div`
+    position: relative;
+    min-height: calc(80vw / ${props=>props.isSixteenNine} + 90px);
+`
+
+export const Container2 = styled.div`
     position: absolute;
     left: 50%;
     top: 50%;
@@ -23,6 +28,9 @@ export const ArrowLeft = styled.div`
     cursor: pointer;
     background-color: rgba(0, 0, 0, .3);
     padding: 10px 0;
+    @media(max-width: 870px) {
+        opacity: 1;
+    }
 `
 
 export const ArrowRight = styled.div`
@@ -35,6 +43,9 @@ export const ArrowRight = styled.div`
     cursor: pointer;
     background-color: rgba(0, 0, 0, .3);
     padding: 10px 0;
+    @media(max-width: 870px) {
+        opacity: 1;
+    }
 `
 
 export const ImageContainer = styled.div`

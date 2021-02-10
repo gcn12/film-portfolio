@@ -9,6 +9,7 @@ import {
     ArrowLeft,
     ArrowRight,
     Container,
+    Container2,
     Back,
 } from './Gallery.styles'
 
@@ -17,6 +18,23 @@ class Gallery extends Component {
     state = {
         urls: [],
         isLoaded: false,
+    }
+
+    keyPressChangeImage = (e) => {
+        if(e.keyCode===37) {
+            if(this.props.index>0){
+                this.props.dispatch(previous())
+            }else if (this.props.index===0){
+                this.props.dispatch(startIndex(this.props.urls.length-1))
+            }
+        }
+        if(e.keyCode===39) {
+            if(this.props.index<this.props.urls.length-1){
+                this.props.dispatch(next())
+            }else if (this.props.index===this.props.urls.length-1){
+                this.props.dispatch(startIndex(0))
+            }
+        }
     }
     
     getPhotos = () => {
@@ -60,28 +78,36 @@ class Gallery extends Component {
 
     componentDidMount() {
         this.getPhotos()
+        window.addEventListener('keydown', this.keyPressChangeImage)
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('keydown', this.keyPressChangeImage)
     }
 
     render(){
         return(
-            <Container opacity={this.state.isLoaded ? 1 : 0}>
-                <Back onClick={this.props.history.goBack}>Back</Back>
-                    <ImageContainer>
-                        <ArrowLeft>
-                            <Arrow onClick={this.previousImage} />
-                        </ArrowLeft>
-                        <img onLoad={()=>this.setState({isLoaded: true})} className="enlarged-image" alt="large display" src={this.props.urls[this.props.index]}></img>
-                        <ArrowRight>
-                            <Arrow onClick={this.nextImage} />
-                        </ArrowRight>
-                    </ImageContainer>
+            <Container isSixteenNine={this.props.isSixteenNine ? 1.77 : 2.35}>
+                <Container2 opacity={this.state.isLoaded ? 1 : 0}>
+                    <Back onClick={this.props.history.goBack}>Back</Back>
+                        <ImageContainer>
+                            <ArrowLeft>
+                                <Arrow onClick={this.previousImage} />
+                            </ArrowLeft>
+                            <img onLoad={()=>this.setState({isLoaded: true})} className="enlarged-image" alt="large display" src={this.props.urls[this.props.index]}></img>
+                            <ArrowRight>
+                                <Arrow onClick={this.nextImage} />
+                            </ArrowRight>
+                        </ImageContainer>
+                </Container2>
             </Container>
         )
     }
 }
 
 const mapStateToProps = (state) => ({
-    index: state.enlargeImage.index
+    index: state.enlargeImage.index,
+    isSixteenNine: state.appState.isSixteenNine
 })
 
 export default connect(mapStateToProps)(Gallery)
