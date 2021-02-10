@@ -1,7 +1,7 @@
 const content = {
     newyear: {
         url: "newyear",
-        header: "A New Year (Music Video)",
+        header: "A New Year (music video)",
         displayTitle: "A New Year",
         video: "",
         thumbnail: "https://live.staticflickr.com/65535/50208144398_e6159d9acb_k.jpg",
@@ -10,7 +10,7 @@ const content = {
     },
     fallen: {
         url: "fallen",
-        header: "The Fallen (Feature)",
+        header: "The Fallen (feature)",
         displayTitle: "The Fallen",
         video: "388770525", //vimeo link id
         videoHost: 'vimeo',
@@ -20,7 +20,7 @@ const content = {
     },  
     occult: {
         url: "occult",
-        header: "The Occult (Short Film)",
+        header: "The Occult (short film)",
         displayTitle: "The Occult",
         video: "",
         thumbnail: "https://live.staticflickr.com/65535/50209006287_da33fdd21a_k.jpg",
@@ -29,7 +29,7 @@ const content = {
     },
     lovestruth: {
         url: "lovestruth",
-        header: "Love's Truth Behind (Music Video)",
+        header: "Love's Truth Behind (music video)",
         displayTitle: "Love's Truth Behind",
         video: "391693065",
         videoHost: 'vimeo',
@@ -39,7 +39,7 @@ const content = {
     },
     december: {
         url: "december",
-        header: "December (Short Film)",
+        header: "December (short film)",
         displayTitle: "December",
         video: "390813222",
         videoHost: 'vimeo',
@@ -49,7 +49,7 @@ const content = {
     },
     wiches: {
         url: "wiches",
-        header: "Snitches Get Wiches (Short Film)",
+        header: "Snitches Get Wiches (short film)",
         displayTitle: "Snitches Get Wiches",
         video: "",
         thumbnail: "https://live.staticflickr.com/65535/50208725981_aa3ffb8051_k.jpg",
@@ -58,7 +58,7 @@ const content = {
     },
     butterfly: {
         url: "butterfly",
-        header: "Butterfly (Short Film)",
+        header: "Butterfly (short film)",
         displayTitle: "Butterfly",
         video: "387162188",
         videoHost: 'vimeo',
@@ -68,7 +68,7 @@ const content = {
     },
     yesno: {
         url: "yesno",
-        header: "Yes/No (Short Film)",
+        header: "Yes/No (short film)",
         displayTitle: "Yes/No",
         video: "",
         thumbnail: "https://live.staticflickr.com/65535/50219876208_8b579a0fcb_k.jpg",
@@ -77,7 +77,7 @@ const content = {
     },
     idealconversation: {
         url: "idealconversation",
-        header: "An Ideal Conversation (Short Film)",
+        header: "An Ideal Conversation (short film)",
         displayTitle: "An Ideal Conversation",
         video: "https://www.youtube.com/embed/UeVJnwMX5RU",
         videoHost: 'youtube',
@@ -87,7 +87,7 @@ const content = {
     },
     oakmilk: {
         url: "oakmilk",
-        header: "Oak Milk (Short Film)",
+        header: "Oak Milk (short film)",
         displayTitle: "Oak Milk",
         video: "",
         videoHost: '',
@@ -95,6 +95,28 @@ const content = {
         album: "72157716179489073",
         sixteenNine: true,
         isLoad: true,
+    },
+    palmtrees: {
+        url: "palmtrees",
+        header: "Palm Trees (music video)",
+        displayTitle: "Oak Milk",
+        video: "",
+        videoHost: '',
+        thumbnail: "https://live.staticflickr.com/65535/50929773916_3199fa9fcd_c.jpg", //comes from embed code
+        album: "72157718236022866",
+        sixteenNine: true,
+        // isLoad: true,
+    },
+    pesos: {
+        url: "pesos",
+        header: "Pesos (music video)",
+        displayTitle: "Oak Milk",
+        video: "",
+        videoHost: '',
+        thumbnail: "https://live.staticflickr.com/65535/50929784106_2bf2131594_c.jpg",
+        album: "72157718238870048",
+        sixteenNine: true,
+        // isLoad: true,
     },
 }
 
